@@ -12,8 +12,8 @@
 }
 
 .profileImg {
-  width: 7rem; /* w-28 = 7 * 4 = 28px * 4 = 112px (7rem) */
-  height: 7rem; /* h-28 */
+  width: 8rem; /* w-28 = 7 * 4 = 28px * 4 = 112px (7rem) */
+  height: 8rem; /* h-28 */
   border-radius: 9999px; /* rounded-full */
   object-fit: cover;
   margin-bottom: 1.5rem; /* mb-6 */

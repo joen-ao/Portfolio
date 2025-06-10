@@ -1,13 +1,42 @@
-/* src/components/Navbar/Navbar.module.css */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
+  padding: 0.5rem 0;
   background-color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+  /* ...resto del código... */
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+.header.scrolled .menuWrapper {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  transition: background 0.3s, box-shadow 0.3s, border-radius 0.3s;
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #f3f4f6 20%,
+    #f3f4f6 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
 }
 
 .container {
@@ -16,15 +45,21 @@
   margin-right: auto;
   padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   font-weight: 700;
   color: #1f2937;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translateY(-50%);
+  margin-left: 0;
 }
 
 .menu {
@@ -35,6 +70,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {

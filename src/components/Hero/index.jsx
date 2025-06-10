@@ -13,10 +13,10 @@ function Hero() {
       />
       <h2 className={styles.subtitle}>Hola! Soy Joen Anaya 👋🏼</h2>
       <h1 className={styles.title}>
-        Desarrollador junior <br className={styles.brHiddenOnSmall} /> based in London.
+        Desarrollador junior <br className={styles.brHiddenOnSmall} /> ubicado en Colombia.
       </h1>
       <p className={styles.description}>
-        Desarrolladora junior colombiano con formación en Ingeniería de Sistemas y experiencia creando aplicaciones web con React, Java y Power Platform, aplicando buenas prácticas, arquitecturas modernas y enfoque en la experiencia de usuario.
+        Desarrollador junior colombiano con formación en Ingeniería de Sistemas y experiencia creando aplicaciones web con React, Java y Power Platform, aplicando buenas prácticas, arquitecturas modernas y enfoque en la experiencia de usuario.
       </p>
 
       <div className={styles.buttonContainer}>
@@ -27,7 +27,7 @@ function Hero() {
           contactame <ArrowRight size={16} />
         </a>
         <a
-          href={resumePdf} // Usa la variable importada
+          href={resumePdf} 
           download
           className={styles.btnSecondary}
         >
