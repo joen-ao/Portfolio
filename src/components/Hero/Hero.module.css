@@ -12,8 +12,8 @@
 }
 
 .profileImg {
-  width: 8rem; /* w-28 = 7 * 4 = 28px * 4 = 112px (7rem) */
-  height: 8rem; /* h-28 */
+  width: 11rem; /* w-28 = 7 * 4 = 28px * 4 = 112px (7rem) */
+  height: 11rem; /* h-28 */
   border-radius: 9999px; /* rounded-full */
   object-fit: cover;
   margin-bottom: 1.5rem; /* mb-6 */
@@ -23,14 +23,15 @@
 .subtitle {
   font-size: 1.125rem; /* text-lg */
   color: #4b5563; /* text-gray-600 */
-  margin-bottom: 0.5rem; /* mb-2 */
+  margin-bottom: 0; /* mb-2 */
 }
 
 .title {
   font-size: 2.25rem; /* text-4xl */
   font-weight: 700; /* font-bold */
   color: #111827; /* text-gray-900 */
-  margin-bottom: 1rem; /* mb-4 */
+  margin-bottom: 1rem;
+  margin-top: 0; /* mb-4 */
 }
 
 @media (min-width: 640px) {
@@ -47,6 +48,10 @@
   .brHiddenOnSmall {
     display: inline;
   }
+}
+
+.highlight {
+  color: #3b82f6; /* Reemplaza por el color que desees */
 }
 
 .description {
@@ -82,7 +87,8 @@
 }
 
 .btnPrimary:hover {
-  background-color: #111111; /* hover:bg-gray-900 */
+  background-color: #3b82f6; /* hover:bg-gray-900 */
+  color: white;
 }
 
 .btnSecondary {
@@ -100,4 +106,5 @@
 
 .btnSecondary:hover {
   background-color: #f3f4f6; /* hover:bg-gray-100 */
+  color: #3b82f6;
 }

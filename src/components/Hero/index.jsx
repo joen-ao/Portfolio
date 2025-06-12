@@ -11,9 +11,10 @@ function Hero() {
         alt="Profile"
         className={styles.profileImg}
       />
-      <h2 className={styles.subtitle}>Hola! Soy Joen Anaya 👋🏼</h2>
+      <h2 className={styles.subtitle}>Software Developer</h2>
       <h1 className={styles.title}>
-        Desarrollador junior <br className={styles.brHiddenOnSmall} /> ubicado en Colombia.
+        Hello, I'm <br className={styles.brHiddenOnSmall} />
+        <span className={styles.highlight}>Joen Anaya.</span>
       </h1>
       <p className={styles.description}>
         Desarrollador junior colombiano con formación en Ingeniería de Sistemas y experiencia creando aplicaciones web con React, Java y Power Platform, aplicando buenas prácticas, arquitecturas modernas y enfoque en la experiencia de usuario.
@@ -34,6 +35,15 @@ function Hero() {
           currículum <Download size={16} />
         </a>
       </div>
+
+      <div>
+        <div>
+          <p>1.2</p>
+          <p>Años de experiencia</p>
+        </div>
+
+      </div>
+
     </section>
   );
 }
