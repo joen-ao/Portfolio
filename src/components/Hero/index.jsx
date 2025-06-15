@@ -2,8 +2,63 @@ import { ArrowRight, Download } from "lucide-react";
 import profileImg from "../../assets/fb.jpg";
 import resumePdf from "../../assets/resume.pdf"; // Importa el PDF
 import styles from "./Hero.module.css";
+import React, { useEffect, useState } from "react";
 
 function Hero() {
+
+  const [experience, setExperience] = useState(0);
+  const [skills, setSkills] = useState(0);
+  const [certifications, setCertifications] = useState(0);
+  const [englishLevel, setEnglishLevel] = useState("B1");
+
+  useEffect(() => {
+    let current = 0;
+    const target = 1.2;
+    const step = 0.1;
+    const interval = setInterval(() => {
+      current = Math.min(current + step, target);
+      setExperience(Number(current.toFixed(1)));
+      if (current >= target) clearInterval(interval);
+    }, 80);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    let current = 0;
+    const target = 10;
+    const step = 1;
+    const interval = setInterval(() => {
+      current = Math.min(current + step, target);
+      setSkills(current);
+      if (current >= target) clearInterval(interval);
+    }, 80);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    let current = 0;
+    const target = 20;
+    const step = 1;
+    const interval = setInterval(() => {
+      current = Math.min(current + step, target);
+      setCertifications(current);
+      if (current >= target) clearInterval(interval);
+    }, 80);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+  const levels = ["A0", "A1", "A2", "B0", "B1"];
+  let index = 0;
+  const interval = setInterval(() => {
+    setEnglishLevel(levels[index]);
+    index++;
+    if (index >= levels.length) clearInterval(interval);
+  }, 200); // Puedes ajustar la velocidad
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <section id="hero" className={styles.heroSection}>
       <img
@@ -36,12 +91,26 @@ function Hero() {
         </a>
       </div>
 
-      <div>
-        <div>
-          <p>1.2</p>
-          <p>Años de experiencia</p>
+      <div className={styles.statsContainer}>
+        <div className={styles.statsItem}>
+          <p className={styles.firstStat}>{experience}</p>
+          <p className={styles.secondStat}>Años de experiencia</p>
         </div>
 
+        <div className={styles.statsItem}>
+          <p className={styles.firstStat}>+{skills}</p>
+          <p className={styles.secondStat}>Skills</p>
+        </div>
+
+        <div className={styles.statsItem}>
+          <p className={styles.firstStat}>+{certifications}</p>
+          <p className={styles.secondStat}>Certificaciónes</p>
+        </div>
+
+        <div className={styles.statsItem}>
+          <p className={styles.firstStat}>{englishLevel}</p>
+          <p className={styles.secondStat}>Ingles</p>
+        </div>
       </div>
 
     </section>
