@@ -10,10 +10,27 @@ function Hero() {
   const [skills, setSkills] = useState(0);
   const [certifications, setCertifications] = useState(0);
   const [englishLevel, setEnglishLevel] = useState("B1");
+  const [typedText, setTypedText] = useState("");
+  const texts = ["Software Developer", "Power Platform Developer"];
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedText(texts[step].slice(0, index + 1));
+      index++;
+      if (index === texts[step].length) {
+        clearInterval(interval);
+        // Espera 1.5s y pasa al siguiente texto (o vuelve al primero)
+        setTimeout(() => setStep((prev) => (prev + 1) % texts.length), 1500);
+      }
+    }, 80);
+    return () => clearInterval(interval);
+  }, [step]);
 
   useEffect(() => {
     let current = 0;
-    const target = 1.2;
+    const target = 1.3;
     const step = 0.1;
     const interval = setInterval(() => {
       current = Math.min(current + step, target);
@@ -66,7 +83,12 @@ function Hero() {
         alt="Profile"
         className={styles.profileImg}
       />
-      <h2 className={styles.subtitle}>Software Developer</h2>
+
+      <h2 className={styles.subtitle}>
+        {typedText}
+        <span className={styles.cursor}>|</span>
+      </h2>
+
       <h1 className={styles.title}>
         Hello, I'm <br className={styles.brHiddenOnSmall} />
         <span className={styles.highlight}>Joen Anaya.</span>

@@ -1,9 +1,17 @@
-
 import React, { useEffect, useState } from "react";
-import styles from "./Navbar.module.css"; // Importamos el CSS Module
+import { Link } from "react-scroll";
+import styles from "./Navbar.module.css";
+
+const sections = [
+  { id: "hero", label: "Inicio" },
+  { id: "about", label: "Sobre mí" },
+  { id: "projects", label: "Proyectos" },
+  { id: "contact", label: "Contáctame" },
+];
 
 const Navbar = () => {
-const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const onScroll = () => {
@@ -13,21 +21,47 @@ const [scrolled, setScrolled] = useState(false);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = "hero";
+      for (const section of sections) {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = section.id;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <nav className={styles.container}>
-        
-        <h1 className={styles.title}>Mi Portafolio</h1>
         <div className={styles.menuWrapper}>
           <ul className={styles.menu}>
-            <li><a href="#hero" className={styles.link}>Inicio</a></li>
-            <li><a href="#about" className={styles.link}>Sobre mí</a></li>
-            <li><a href="#services" className={styles.link}>Servicios</a></li>
-            <li><a href="#projects" className={styles.link}>Proyectos</a></li>
-            <li><a href="#contact" className={styles.link}>Contáctame</a></li>
+            {sections.map((section) => (
+              <li key={section.id}>
+                <Link
+                  to={section.id}
+                  spy={true}
+                  smooth={true}
+                  offset={-90} 
+                  duration={500}
+                  className={`${styles.link} ${activeSection === section.id ? styles.active : ""}`}
+                >
+                  {section.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        
       </nav>
     </header>
   );

@@ -7,7 +7,6 @@
   padding: 0.5rem 0;
   background-color: white;
   box-shadow: none;
-  /* ...resto del código... */
 }
 
 .header.scrolled {
@@ -75,11 +74,14 @@
 }
 
 .link {
-  color: inherit;
+  color: #374151;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
+  cursor: pointer;
 }
 
-.link:hover {
-  color: #3b82f6;
+.link:hover,
+.link.active {
+  color: #2563eb; /* Azul */
+  font-weight: 600;
 }
