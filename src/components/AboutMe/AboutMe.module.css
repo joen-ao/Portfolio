@@ -74,6 +74,13 @@
   margin-top: 2.5rem;
 }
 
+.gridEducation {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
 .card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -132,7 +139,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas */
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .skillBox {
@@ -184,8 +191,34 @@
 }
 
 .educationScroll {
-  max-height: 500px; /* Puedes ajustar esta altura según tu diseño */
+  max-height: 460px; /* Puedes ajustar esta altura según tu diseño */
   overflow-y: auto;
   padding-right: 0.5rem; /* espacio para evitar que el scroll tape el contenido */
   margin-top: 1rem;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #cbd5e1 transparent; /* Firefox */
+}
+
+.certButton {
+  display: inline-block; /* Necesario para que padding, bg, etc. se apliquen bien */
+  text-decoration: none; /* Quita el subrayado de los links */
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  margin-left: auto; /* Empuja hacia la derecha si el contenedor es flex */
+  transition: background-color 0.2s;
+}
+
+.certButton:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.aboutContainer {
+  margin-top: 2.5rem;
 }
