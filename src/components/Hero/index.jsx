@@ -3,6 +3,7 @@ import profileImg from "../../assets/fb.jpg";
 import resumePdf from "../../assets/resume.pdf"; // Importa el PDF
 import styles from "./Hero.module.css";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 function Hero() {
 
@@ -98,12 +99,16 @@ function Hero() {
       </p>
 
       <div className={styles.buttonContainer}>
-        <a
-          href="#contact"
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-90} // Ajusta según la altura de tu navbar
+          duration={500}
           className={styles.btnPrimary}
         >
           contactame <ArrowRight size={16} />
-        </a>
+        </Link>
         <a
           href={resumePdf} 
           download

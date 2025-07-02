@@ -23,7 +23,7 @@ function AboutMe() {
   const { ref, inView } = useInView({ threshold: 0.4 });
   const { ref: skillsRef, inView: skillsInView } = useInView({ threshold: 0.4 });
   const { ref: educationRef, inView: educationInView } = useInView({ threshold: 0.4 });
-  const { ref: aboutMeRef, inView: aboutMeInView } = useInView({ threshold: 0.4 });
+  const { ref: aboutMeRef } = useInView({ threshold: 0.4 });
 
 
 
@@ -50,28 +50,46 @@ function AboutMe() {
       url: "https://drive.google.com/file/d/1cjjRelQzOhIck4Y4q2GAEHCO4ytL2qPX/view?usp=sharing"
     },
     {
+      title: "Certificado de finalización del programa: Backend con Java",
+      date: "Enero 2025",
+      issuer: "Oracle y Alura Latam",
+      url: "https://drive.google.com/file/d/1kSYjjxJxdpaj5NfRmj7SqAqPCtrHMn7X/view?usp=sharing"
+    },
+    {
       title: "Construcción de base de datos con MySQL",
       date: "Marzo 2025",
       issuer: "SENA",
       url: "https://drive.google.com/file/d/1kMroTTogQzHz0sbH_Uy5peM6BNBSQbX_/view?usp=drive_link"
     },
     {
-      title: "Desarrollo de aplicaciones con manejo de datos en la memoria - Java",
-      date: "Noviembre 2024",
-      issuer: "SENA",
-      url: "https://drive.google.com/file/d/1VBYHN77NgoOsAsyPlyHH4vLo5sUlNQdx/view?usp=drive_link"
+      title: "Desarrollo avanzado de aplicaciones de lienzo en Power Apps:",
+      date: "Febrero 2025", 
+      issuer: "Microsoft Learn",
+      url: "https://drive.google.com/file/d/1uTjYOkYxYG5JP_sl4kkTrq4l-C5_JWIq/view?usp=sharing"
     },
     {
-      title: "Ciberseguridad",
-      date: "Marzo 2024",
-      issuer: "Mintic",
-      url: "https://drive.google.com/file/d/1ivC90str2yVI2p6vXUyAVC4IGxd99T0y/view?usp=drive_link"
+      title: "AWS Academy Cloud Foundations",
+      date: "Septiembre 2024",
+      issuer: "AWS Academy",
+      url:"https://drive.google.com/file/d/1sd0AkU7CpL4cTTqcSih5Erduqrv5X0B7/view?usp=sharing"
+    },
+    {
+      title: "AWS Academy Cloud Developing",
+      date: "Noviembre 2024",
+      issuer: "AWS Academy",
+      url:"https://drive.google.com/file/d/1h-K34pEsWqV8ZcQZlyzf4aj7uiE-L-is/view?usp=sharing"
     },
     {
       title: "Analítica De Datos",
       date: "Marzo 2024",
       issuer: "Mintic",
       url: "https://drive.google.com/file/d/1UVcSBd7luxfhq7OpDlDx8hsd8OD0ynEf/view?usp=drive_link"
+    },
+    {
+      title: "Ciberseguridad",
+      date: "Marzo 2024",
+      issuer: "Mintic",
+      url: "https://drive.google.com/file/d/1ivC90str2yVI2p6vXUyAVC4IGxd99T0y/view?usp=drive_link"
     },
     {
       title: "Git Y Github",
@@ -128,47 +146,31 @@ function AboutMe() {
       url:"https://drive.google.com/file/d/1_gGgUc6ecURcXgx82cS9FPrDujOjj91P/view?usp=sharing"
     },
     {
-      title: "AWS Academy Cloud Foundations",
-      date: "Septiembre 2024",
-      issuer: "AWS Academy",
-      url:"https://drive.google.com/file/d/1sd0AkU7CpL4cTTqcSih5Erduqrv5X0B7/view?usp=sharing"
-    },
-    {
-      title: "AWS Academy Cloud Developing",
-      date: "Noviembre 2024",
-      issuer: "AWS Academy",
-      url:"https://drive.google.com/file/d/1h-K34pEsWqV8ZcQZlyzf4aj7uiE-L-is/view?usp=sharing"
-    },
-    {
       title: "Analisis Exploratorio de Datos con Python",
       date: "Junio 2024",
       issuer: "SENA",
       url:"https://drive.google.com/file/d/1drcdCJXWSS5NRp5Aw96c7BkfrLqIIYGE/view?usp=sharing"
     },
+    
     {
-      title: "Desarrollo avanzado de aplicaciones de lienzo en Power Apps:",
-      date: "Febrero 2025", 
-      issuer: "Microsoft Learn",
-      url: "https://drive.google.com/file/d/1uTjYOkYxYG5JP_sl4kkTrq4l-C5_JWIq/view?usp=sharing"
-    },
-    {
-      title: "Certificado de finalización del programa: Backend con Java",
+      title: "Formación Java Orientado a Objetos",
       date: "Enero 2025",
       issuer: "Oracle y Alura Latam",
-      url: "https://drive.google.com/file/d/1kSYjjxJxdpaj5NfRmj7SqAqPCtrHMn7X/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1ysKZ1ReKlUkAdPJ5Ux4DVpMlw7_6sFtu/view?usp=sharing"
+    },
+    {
+      title: "Desarrollo de aplicaciones con manejo de datos en la memoria - Java",
+      date: "Noviembre 2024",
+      issuer: "SENA",
+      url: "https://drive.google.com/file/d/1VBYHN77NgoOsAsyPlyHH4vLo5sUlNQdx/view?usp=drive_link"
     },
     {
       title: "Chat GPT: Optimizando la calidad de los resultados",
       date: "Julio 2024",
       issuer: "Oracle y Alura Latam",
       url: "https://drive.google.com/file/d/13AaAFRtDv6ocSg20ObcQU-fQ8cQpqFPy/view?usp=sharing"
-    },
-    {
-      title: "Formación Java Orientado a Objetos",
-      date: "Enero 2025",
-      issuer: "Oracle y Alura Latam",
-      url: "https://drive.google.com/file/d/1ysKZ1ReKlUkAdPJ5Ux4DVpMlw7_6sFtu/view?usp=sharing"
     }
+    
   ];
 
   const renderContent = () => {
@@ -278,19 +280,20 @@ function AboutMe() {
           <div ref={aboutMeRef}>
             <h2 className={styles.rightHeading}>Sobre Mí</h2>
             <div className={styles.aboutContainer}>
-              <div className={`${styles.card} ${activeTab === "about" && aboutMeInView ? styles.show : ""}`}>
-                  <p className={styles.description}>
-                  Soy un <strong>desarrollador apasionado</strong> por crear soluciones que conecten <strong>propósito</strong> y <strong>tecnología</strong>.
-                  Disfruto convertir <strong>ideas</strong> en productos <strong>funcionales</strong> y <strong>atractivos</strong>, utilizando tanto <strong>habilidades técnicas</strong> como <strong>creatividad</strong>. 
-                  Mi formación en <strong>Ingeniería de Sistemas</strong> y experiencia con tecnologías modernas como <strong>React</strong>, <strong>Java</strong> y <strong>Power Platform</strong> me permiten <strong>adaptarme con facilidad</strong> a diversos entornos.
-                </p>
+              
                 <p className={styles.description}>
-                  Pero más allá de la experiencia visible, lo que realmente me define es mi <strong>capacidad de aprender rápido</strong>.
                   El <strong>99% de los trabajos</strong> pueden aprenderse, y yo lo hago con <strong>agilidad</strong> y <strong>compromiso</strong>. Si no encuentras en mi perfil exactamente lo que buscas,
                   no significa que no pueda hacerlo: significa que aún <strong>no lo he aprendido</strong>. Y cuando lo haga, <strong>lo dominaré</strong>.
                 </p>
-
-              </div>
+                <div className={styles.infoGrid}>
+                  <p><span>Nombre:</span> <strong>Joen Anaya</strong></p>
+                  <p><span>Experiencia:</span> <strong>1.2 años</strong></p>
+                  <p><span>Teléfono:</span> <strong>+57 3014184466</strong></p>
+                  <p><span>Nacionalidad:</span> <strong>Colombiano</strong></p>
+                  <p><span>Email:</span> <strong>anayajoen@gmail.com</strong></p>
+                  <p><span>Lenguajes:</span> <strong>Español, Inglés</strong></p>
+                </div>
+                
             </div>
           </div>
         );

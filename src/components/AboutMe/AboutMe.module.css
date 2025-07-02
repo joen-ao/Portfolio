@@ -4,7 +4,9 @@
   padding: 3rem 2rem;
   max-width: 1200px;
   min-height: 600px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7.6rem;
 }
 
 .leftPanel {
@@ -20,7 +22,7 @@
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #4482d8;
+  color: #3b82f6;
   margin-bottom: 1rem;
 }
 
@@ -220,5 +222,22 @@
 }
 
 .aboutContainer {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
+
+.infoGrid p {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.infoGrid strong {
+  font-weight: 700;
 }

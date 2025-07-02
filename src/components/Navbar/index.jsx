@@ -22,24 +22,25 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      let current = "hero";
-      for (const section of sections) {
-        const el = document.getElementById(section.id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            current = section.id;
+      const handleScroll = () => {
+        let current = "hero";
+        const middle = window.innerHeight / 2;
+        for (const section of sections) {
+          const el = document.getElementById(section.id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= middle && rect.bottom >= middle) {
+              current = section.id;
+            }
           }
         }
-      }
-      setActiveSection(current);
-    };
+        setActiveSection(current);
+      };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
