@@ -37,8 +37,7 @@ function ContactMe() {
       <div className={styles.container} id="contact">
         <h2 className={styles.title}>Contactame</h2>
         <p className={styles.description}>
-          Me encantaria saber de ti! If you have any questions, comments or
-          feedback, please use the form below.
+          Ya sea una oportunidad laboral, una propuesta creativa o una simple charla sobre tecnología, estaré encantado de recibir tu mensaje.
         </p>
 
         <form className={styles.form} onSubmit={sendEmail} ref={form}>

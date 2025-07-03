@@ -1,9 +1,13 @@
 import styles from './Projects.module.css';
+import { useInView } from "react-intersection-observer";
 import forohubImage from '../../assets/forohub.jpg';
 import misTicketsImage from '../../assets/mistickets.png';
 import literaluraImage from '../../assets/library.jpg';
 
 function Projects() {
+
+  const { ref, inView } = useInView({ threshold: 0.3 });
+
   const projects = [
     {
       id: 1,
@@ -39,8 +43,8 @@ function Projects() {
         experiencia en el desarrollo web.
       </p>
       
-      <div className={styles.projectGrid}>
-        {projects.map((project) => (
+      <div className={styles.projectGrid} ref={ref}>
+        {projects.map((project, index) => (
           <a 
             key={project.id}
             href={project.url}
@@ -48,7 +52,10 @@ function Projects() {
             rel="noopener noreferrer"
             className={styles.projectLink}
           >
-            <div className={styles.projectCard}>
+            <div
+              className={`${styles.projectCard} ${inView ? styles.show : ""}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
+            >
               <div className={styles.imageContainer}>
                 <img src={project.image} alt={`${project.title} Project`} className={styles.projectImage} />
               </div>
@@ -56,8 +63,8 @@ function Projects() {
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p className={styles.projectCategory}>{project.category}</p>
                 <div className={styles.skillsBadges}>
-                  {project.badges.map((badge, index) => (
-                    <span key={index} className={styles.badge}>{badge}</span>
+                  {project.badges.map((badge, idx) => (
+                    <span key={idx} className={styles.badge}>{badge}</span>
                   ))}
                 </div>
               </div>
