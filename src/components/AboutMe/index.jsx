@@ -201,41 +201,67 @@ function AboutMe() {
       case "skills":
       return (
         <div ref={skillsRef}>
-          <h2 className={styles.rightHeading}>Mis Habilidades</h2>
-          <div className={styles.skillsContainer}>
-            {[
-              {
-                title: "Frontend",
-                icons: [htmlImg, css3Img, javascriptImg, reactImg],
-              },
-              {
-                title: "Backend",
-                icons: [javaImg, mysqlImg, mongodbImg],
-              },
-              {
-                title: "Power Platform",
-                icons: [powerAppsImg, powerAutomateImg, sharepointImg, powerBiImg],
-              },
-              {
-                title: "Herramientas",
-                icons: [pythonImg, gitImg, githubImg, vscodeImg, intellijImg],
-              },
-            ].map((group, index) => (
-              <div
-                className={`${styles.skillBox} ${activeTab === "skills" && skillsInView ? styles.show : ""}`}
-                key={index}
-                style={{ transitionDelay: `${index * 0.15}s` }}
-              >
-                <h3 className={styles.skillTitle}>{group.title}</h3>
-                <div className={styles.iconGrid}>
-                  {group.icons.map((src, idx) => (
-                    <img key={idx} src={src} alt="skill icon" />
-                  ))}
-                </div>
+        <h2 className={styles.rightHeading}>Mis Habilidades</h2>
+        <div className={styles.skillsContainer}>
+          {[
+            {
+              title: "Frontend",
+              icons: [
+                { src: htmlImg, name: "HTML" },
+                { src: css3Img, name: "CSS3" },
+                { src: javascriptImg, name: "JavaScript" },
+                { src: reactImg, name: "React" },
+              ],
+            },
+            {
+              title: "Backend",
+              icons: [
+                { src: javaImg, name: "Java" },
+                { src: mysqlImg, name: "MySQL" },
+                { src: mongodbImg, name: "MongoDB" },
+              ],
+            },
+            {
+              title: "Power Platform",
+              icons: [
+                { src: powerAppsImg, name: "Power Apps" },
+                { src: powerAutomateImg, name: "Power Automate" },
+                { src: sharepointImg, name: "SharePoint" },
+                { src: powerBiImg, name: "Power BI" },
+              ],
+            },
+            {
+              title: "Herramientas",
+              icons: [
+                { src: pythonImg, name: "Python" },
+                { src: gitImg, name: "Git" },
+                { src: githubImg, name: "GitHub" },
+                { src: vscodeImg, name: "VS Code" },
+                { src: intellijImg, name: "IntelliJ" },
+              ],
+            },
+          ].map((group, index) => (
+            <div
+              className={`${styles.skillBox} ${activeTab === "skills" && skillsInView ? styles.show : ""}`}
+              key={index}
+              style={{ transitionDelay: `${index * 0.15}s` }}
+            >
+              <h3 className={styles.skillTitle}>{group.title}</h3>
+              <div className={styles.iconGrid}>
+                {group.icons.map((icon, idx) => (
+                  <img
+                    key={idx}
+                    src={icon.src}
+                    alt={icon.name}
+                    title={icon.name}
+                    className={styles.skillIcon}
+                  />
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </div>
       );
 
       case "education":
