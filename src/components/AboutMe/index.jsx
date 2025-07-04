@@ -201,7 +201,7 @@ function AboutMe() {
       case "skills":
       return (
         <div ref={skillsRef}>
-          <h2 className={styles.rightHeading}>Mis Skills</h2>
+          <h2 className={styles.rightHeading}>Mis Habilidades</h2>
           <div className={styles.skillsContainer}>
             {[
               {
@@ -321,7 +321,7 @@ function AboutMe() {
             onClick={() => setActiveTab("skills")}
             className={`${styles.tab} ${activeTab === "skills" ? styles.active : ""}`}
           >
-            Skills
+            Habilidades
           </button>
           <button
             onClick={() => setActiveTab("education")}
