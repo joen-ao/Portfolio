@@ -17,9 +17,12 @@ function ContactMe() {
     form.current.querySelector('#timeSent').value = timeString;
 
     emailjs
-      .sendForm('service_g8w2ms7', 'template_1v53cf9', form.current, {
-        publicKey: 'HuyTCAX1yVo1ctux1',
-      })
+      .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+        )
       .then(
         () => {
           console.log('SUCCESS!');
