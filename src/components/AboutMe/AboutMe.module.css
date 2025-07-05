@@ -281,7 +281,7 @@
 }
 @media (max-width: 600px) {
   .aboutSection {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 2rem;
   }
   .tabs {
     flex-direction: column;

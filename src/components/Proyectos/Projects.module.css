@@ -132,3 +132,12 @@
   background-color: #3b82f6; /* hover:bg-gray-100 */
   color: #ffffff;
 }
+
+@media (max-width: 640px) {
+  .projectSection {
+    padding: 1.5rem 2rem;
+  }
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}

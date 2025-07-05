@@ -9,6 +9,7 @@
   text-align: center;
   padding-left: 1rem; /* px-4 */
   padding-right: 1rem;
+  padding-top: 4rem;
 }
 
 .profileImg {
@@ -33,11 +34,20 @@
   margin-bottom: 1rem;
   margin-top: 0; /* mb-4 */
 }
+@media (min-width: 640px) {
+  .title {
+    font-size: 4rem; /* md:text-5xl */
+  }
+}
 
 .brHiddenOnSmall {
   display: none;
 }
-
+@media (min-width: 640px) {
+  .brHiddenOnSmall {
+    display: inline;
+  }
+}
 .highlight {
   color: #3b82f6;
 }
@@ -51,7 +61,7 @@
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 1rem; /* gap-4 */
 }
@@ -133,15 +143,16 @@
     max-width: 100%; /* Evita que el contenido se expanda en pantallas grandes */
     margin-left: 0; /* Centra horizontalmente */
     margin-right: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     align-items: center;
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
   }
 
   .statsContainer {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
   }
@@ -197,7 +208,7 @@
     font-size: 1.1rem; /* text-lg */
   }
   .description {
-    font-size: 1.1rem; /* text-sm */
+    font-size: 1rem; /* text-sm */
     max-width: 100%; /* Evita que el texto se corte en pantallas pequeñas */
     align-items: center;
     text-align: center;
