@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from "./ContactMe.module.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function ContactMe() {
 
@@ -8,6 +11,15 @@ function ContactMe() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const name = form.current.user_name.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!name || !email || !message) {
+      toast.error("Por favor, completa todos los campos antes de enviar.");
+      return;
+    }
 
     // Obtener hora actual
     const now = new Date();
@@ -25,7 +37,7 @@ function ContactMe() {
         )
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success("¡Correo enviado exitosamente!")
           form.current.reset();
         },
         (error) => {
@@ -68,6 +80,7 @@ function ContactMe() {
             Enviar →
           </button>
         </form>
+        <ToastContainer position="top-right" autoClose={3000} />
 
         <footer className={styles.footer}>
           <p className={styles.email}>anayajoen@gmail.com</p>
