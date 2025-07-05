@@ -11,7 +11,6 @@ const sections = [
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = () => setMenuOpen(false);
@@ -24,26 +23,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-      const handleScroll = () => {
-        let current = "hero";
-        const middle = window.innerHeight / 2;
-        for (const section of sections) {
-          const el = document.getElementById(section.id);
-          if (el) {
-            const rect = el.getBoundingClientRect();
-            if (rect.top <= middle && rect.bottom >= middle) {
-              current = section.id;
-            }
-          }
-        }
-        setActiveSection(current);
-      };
 
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      handleScroll();
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -67,7 +47,8 @@ const Navbar = () => {
                   smooth={true}
                   offset={-90}
                   duration={500}
-                  className={`${styles.link} ${activeSection === section.id ? styles.active : ""}`}
+                  activeClass={styles.active}
+                  className={styles.link}
                   onClick={handleLinkClick}
                 >
                   {section.label}
