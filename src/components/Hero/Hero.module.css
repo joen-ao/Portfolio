@@ -34,20 +34,8 @@
   margin-top: 0; /* mb-4 */
 }
 
-@media (min-width: 640px) {
-  .title {
-    font-size: 4rem; /* md:text-5xl */
-  }
-}
-
 .brHiddenOnSmall {
   display: none;
-}
-
-@media (min-width: 640px) {
-  .brHiddenOnSmall {
-    display: inline;
-  }
 }
 
 .highlight {
@@ -66,12 +54,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem; /* gap-4 */
-}
-
-@media (min-width: 640px) {
-  .buttonContainer {
-    flex-direction: row;
-  }
 }
 
 .btnPrimary {
@@ -143,4 +125,87 @@
   color: #6b7280; /* text-gray-500 */
   text-align: left;
   width: 100%;
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding-top: 5rem; /* Espacio para el navbar fijo en móvil */
+    max-width: 100%; /* Evita que el contenido se expanda en pantallas grandes */
+    margin-left: 0; /* Centra horizontalmente */
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .statsItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .firstStat {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+
+  .secondStat {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre botones */
+    margin: 2rem 0; /* Espacio entre botones y el resto del contenido */
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%; /* Botones ocupan todo el ancho */
+    justify-content: center; /* Centra el contenido del botón */
+    font-size: 1rem;
+  }
+
+  .btnPrimary:active {
+    background-color: #3b82f6; /* hover:bg-gray-900 */
+    color: white;
+  }
+
+  .btnSecondary:active {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+    color: #3b82f6;
+  }
+
+  .profileImg {
+    width: 10rem;
+    height: 10rem;
+  }
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 1.1rem; /* text-lg */
+  }
+  .description {
+    font-size: 1.1rem; /* text-sm */
+    max-width: 100%; /* Evita que el texto se corte en pantallas pequeñas */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 640px) {
+  .title {
+    font-size: 4rem;
+  }
 }
