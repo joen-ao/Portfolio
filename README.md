@@ -56,4 +56,5 @@ Este es el código fuente de mi portafolio personal, desarrollado en **React**. 
     VITE_EMAILJS_PUBLIC_KEY=...
 
 6. Inicia el proyecto:
+   ```bash
     npm run dev
