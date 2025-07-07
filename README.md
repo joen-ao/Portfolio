@@ -1,12 +1,57 @@
-# React + Vite
+# Portfolio - Joen Anaya
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el código fuente de mi portafolio personal, desarrollado en **React**. Aquí muestro mi experiencia, habilidades, proyectos y formas de contacto, con un diseño moderno, responsive y soporte para múltiples idiomas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidad
 
-## Expanding the ESLint configuration
+- **Sección Hero:** Presentación animada con typing effect, estadísticas animadas y enlaces a contacto y CV.
+- **Sobre mí:** Tabs con experiencia, habilidades, educación y datos personales, todo traducible.
+- **Proyectos:** Galería de proyectos destacados con enlaces y badges de tecnologías.
+- **Contacto:** Formulario funcional con validación y envío de emails usando EmailJS.
+- **Navbar:** Navegación sticky, menú responsive y switch de idioma (ES/EN).
+- **Footer:** Redes sociales y derechos de autor, también traducible.
+- **Responsive:** Adaptado para escritorio, tablet y móvil.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Librerías utilizadas
+
+- **React**  
+  Framework principal para la UI.
+
+- **react-scroll**  
+  Navegación suave entre secciones.
+
+- **react-i18next**  
+  Internacionalización y cambio de idioma en tiempo real.
+
+- **emailjs-com**  
+  Envío de emails desde el formulario de contacto sin backend.
+
+- **lucide-react**  
+  Iconos modernos y personalizables.
+
+- **react-toastify**  
+  Notificaciones para feedback de usuario.
+
+---
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/joen-ao/portfolio.git
+   cd portfolio
+
+2. Instala las dependencias:
+    npm install
+
+3. Configura tus variables de entorno para EmailJS en un archivo .env:
+    VITE_EMAILJS_SERVICE_ID=...
+    VITE_EMAILJS_TEMPLATE_ID=...
+    VITE_EMAILJS_PUBLIC_KEY=...
+
+4. Inicia el proyecto:
+    npm run dev
