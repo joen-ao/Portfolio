@@ -3,10 +3,12 @@ import { useInView } from "react-intersection-observer";
 import forohubImage from '../../assets/forohub.jpg';
 import misTicketsImage from '../../assets/mistickets.png';
 import literaluraImage from '../../assets/library.jpg';
+import { useTranslation } from "react-i18next";
 
 function Projects() {
 
   const { ref, inView } = useInView({ threshold: 0.3 });
+  const { t } = useTranslation();
 
   const projects = [
     {
@@ -37,10 +39,9 @@ function Projects() {
 
   return (
     <section className={styles.projectSection} id="projects">
-      <h2 className={styles.sectionTitle}>Mis Proyectos</h2>
+      <h2 className={styles.sectionTitle}>{t("projects.title")}</h2>
       <p className={styles.sectionDescription}>
-        ¡Bienvenidos a mi portafolio! Explore una colección de proyectos que muestran mi
-        experiencia en el desarrollo web.
+        {t("projects.description")}
       </p>
       
       <div className={styles.projectGrid} ref={ref}>
@@ -76,7 +77,7 @@ function Projects() {
       <a className={styles.btnSecondary} 
         href="https://github.com/joen-ao?tab=repositories"
         target="_blank"
-        rel="noopener noreferrer">Ver más</a>
+        rel="noopener noreferrer">{t("projects.button")}</a>
 
     </section>  
   );

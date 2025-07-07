@@ -3,10 +3,12 @@ import emailjs from '@emailjs/browser';
 import styles from "./ContactMe.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from "react-i18next";
 
 
 function ContactMe() {
 
+  const { t } = useTranslation();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,7 +19,7 @@ function ContactMe() {
     const message = form.current.message.value.trim();
 
     if (!name || !email || !message) {
-      toast.error("Por favor, completa todos los campos antes de enviar.");
+      toast.error(t("contact.error"));
       return;
     }
 
@@ -37,7 +39,7 @@ function ContactMe() {
         )
       .then(
         () => {
-          toast.success("¡Correo enviado exitosamente!")
+          toast.success(t("contact.success"))
           form.current.reset();
         },
         (error) => {
@@ -50,9 +52,9 @@ function ContactMe() {
   return (
     <section className={styles.contactSection} >
       <div className={styles.container} id="contact">
-        <h2 className={styles.title}>Contactame</h2>
+        <h2 className={styles.title}>{t("contact.title")}</h2>
         <p className={styles.description}>
-          Ya sea una oportunidad laboral, una propuesta creativa o una simple charla sobre tecnología, estaré encantado de recibir tu mensaje.
+          {t("contact.description")}
         </p>
 
         <form className={styles.form} onSubmit={sendEmail} ref={form}>
@@ -60,24 +62,24 @@ function ContactMe() {
             <input
               type="text"
               name="user_name"
-              placeholder="Escribe tu nombre"
+              placeholder={t("contact.placeholder.name")}
               className={styles.input}
             />
             <input
               type="email"
               name="user_email"
-              placeholder="Escribe tu email"
+              placeholder={t("contact.placeholder.email")}
               className={styles.input}
             />
           </div>
           <textarea
             name="message"
-            placeholder="Escribe tu mensaje"
+            placeholder={t("contact.placeholder.message")}
             className={styles.textarea}
           />
           <input type="hidden" name="time" id="timeSent" />
           <button type="submit" value="Send" className={styles.button}>
-            Enviar →
+            {t("contact.button")}
           </button>
         </form>
         <ToastContainer position="top-right" autoClose={3000} />

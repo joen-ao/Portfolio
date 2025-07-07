@@ -1,13 +1,15 @@
-// src/components/Footer.jsx
 import styles from "./Footer.module.css";
 import { Github, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
         <p className={styles.footerText}>
-          © {new Date().getFullYear()} Joen Anaya. Todos los derechos reservados.
+          {t("footer.copyright", { year: new Date().getFullYear() })}
         </p>
         <div className={styles.socialLinks}>
           <a

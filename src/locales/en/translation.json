@@ -1,0 +1,204 @@
+{
+  "Inicio": "Home",
+  "Sobre mí": "About me",
+  "Proyectos": "Projects",
+  "Contáctame": "Contact me",
+
+  "hero.subtitle1": "Software Developer",
+  "hero.subtitle2": "Power Platform Developer",
+  "hero.title": "Hello, I'm",
+  "hero.description": "Junior Colombian developer with a background in Systems Engineering and experience building web applications with React, Java, and Power Platform, applying best practices, modern architectures, and a focus on user experience.",
+  "hero.contact": "contact me",
+  "hero.cv": "resume",
+  "hero.stats.experience": "Years of experience",
+  "hero.stats.skills": "Skills",
+  "hero.stats.certifications": "Certifications",
+  "hero.stats.english": "English",
+
+  "about.heading": "Why hire me?",
+  "about.text": "Because I have the ability to turn ideas into functional, efficient, and user-oriented solutions.",
+  "about.tabs.experience": "Experience",
+  "about.tabs.skills": "Skills",
+  "about.tabs.education": "Education",
+  "about.tabs.about": "About me",
+  "about.experience.heading": "My Experience",
+  "about.skills.heading": "My Skills",
+  "about.education.heading": "My Education",
+  "about.about.heading": "About Me",
+  "about.about.description": "<strong>99% of jobs</strong> can be learned, and I do it with <strong>agility</strong> and <strong>commitment</strong>. If you don't find exactly what you're looking for in my profile, it doesn't mean I can't do it: it means I <strong>haven't learned it yet</strong>. And when I do, <strong>I'll master it</strong>.",
+  "about.info.name": "Name",
+  "about.info.experience": "Experience",
+  "about.info.phone": "Phone",
+  "about.info.nationality": "Nationality",
+  "about.info.email": "Email",
+  "about.info.languages": "Languages",
+  "about.info.value.name": "Joen Anaya",
+  "about.info.value.experience": "1.3 years",
+  "about.info.value.phone": "+57 3014184466",
+  "about.info.value.nationality": "Colombian",
+  "about.info.value.email": "anayajoen@gmail.com",
+  "about.info.value.languages": "Spanish, English",
+  "about.cert.button": "View certificate",
+  "about.experiences": [
+    {
+      "title": "Software Developer",
+      "company": "Banco de la República - Colombia",
+      "period": "Jan 2025 - Jun 2025",
+      "description": "Designed and developed an enterprise solution for Banco de la República using Power Apps, Power Automate, SharePoint, and Power BI, reducing a critical task from 30 hours to just 15 minutes."
+    },
+    {
+      "title": "Web Developer",
+      "company": "Freelance",
+      "period": "Jun 2024 - Dec 2024",
+      "description": "As a freelancer, I have developed web and software projects using technologies such as React for dynamic interfaces, Python for automation, and Java for object-oriented practices."
+    }
+  ],
+  "about.skills.tools": "Tools",
+  "about.education.degree": {
+  "period": "2019 - Expected graduation",
+  "title": "Systems Engineering",
+  "company": "University of Cartagena, Colombia"
+},
+"about.certifications": [
+  {
+    "title": "Professional React Course",
+    "date": "May 2024",
+    "issuer": "Codigo Facilito",
+    "url": "https://drive.google.com/file/d/1cjjRelQzOhIck4Y4q2GAEHCO4ytL2qPX/view?usp=sharing"
+  },
+  {
+      "title": "Program Completion Certificate: Backend with Java",
+      "date": "January 2025",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1kSYjjxJxdpaj5NfRmj7SqAqPCtrHMn7X/view?usp=sharing"
+    },
+    {
+      "title": "Database Construction with MySQL",
+      "date": "March 2025",
+      "issuer": "SENA",
+      "url": "https://drive.google.com/file/d/1kMroTTogQzHz0sbH_Uy5peM6BNBSQbX_/view?usp=drive_link"
+    },
+    {
+      "title": "Advanced Canvas App Development in Power Apps",
+      "date": "February 2025",
+      "issuer": "Microsoft Learn",
+      "url": "https://drive.google.com/file/d/1uTjYOkYxYG5JP_sl4kkTrq4l-C5_JWIq/view?usp=sharing"
+    },
+    {
+      "title": "AWS Academy Cloud Foundations",
+      "date": "September 2024",
+      "issuer": "AWS Academy",
+      "url": "https://drive.google.com/file/d/1sd0AkU7CpL4cTTqcSih5Erduqrv5X0B7/view?usp=sharing"
+    },
+    {
+      "title": "AWS Academy Cloud Developing",
+      "date": "November 2024",
+      "issuer": "AWS Academy",
+      "url": "https://drive.google.com/file/d/1h-K34pEsWqV8ZcQZlyzf4aj7uiE-L-is/view?usp=sharing"
+    },
+    {
+      "title": "Data Analytics",
+      "date": "March 2024",
+      "issuer": "Mintic",
+      "url": "https://drive.google.com/file/d/1UVcSBd7luxfhq7OpDlDx8hsd8OD0ynEf/view?usp=drive_link"
+    },
+    {
+      "title": "Cybersecurity",
+      "date": "March 2024",
+      "issuer": "Mintic",
+      "url": "https://drive.google.com/file/d/1ivC90str2yVI2p6vXUyAVC4IGxd99T0y/view?usp=drive_link"
+    },
+    {
+      "title": "Git and GitHub",
+      "date": "August 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1OajTgNlh4VsxjaPBsCc7ubJsYBPQs3cn/view?usp=drive_link"
+    },
+    {
+      "title": "HTML and CSS: Development Environments",
+      "date": "July 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1hzmNJ536UoHt25e2Y164a7m-wf6ucm9a/view?usp=sharing"
+    },
+    {
+      "title": "HTML and CSS: Classes, Positioning and Flexbox",
+      "date": "July 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1INfUxGIl_lqYVDXh0l0Ml0Th9egoheVf/view?usp=sharing"
+    },
+    {
+      "title": "Variables and Control Structures in OOP with Java",
+      "date": "September 2024",
+      "issuer": "SENA",
+      "url": "https://drive.google.com/file/d/1Yf42_muqpv6M2pz5qmZTT8DdQlf-VUr3/view?usp=drive_link"
+    },
+    {
+      "title": "HTML and CSS: Header, Footer and CSS Variables",
+      "date": "August 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1t8lOgVHGIF1CMqcVRVLs7JkcPerR6M38/view?usp=sharing"
+    },
+    {
+      "title": "HTML and CSS: Responsiveness and Project Deployment",
+      "date": "August 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1dKp80jDi7TbKppu2-c-1Xwod1mxbglr3/view?usp=sharing"
+    },
+    {
+      "title": "Programming Logic with JavaScript",
+      "date": "July 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1zsmHwU8YOZpJBq2DAiF7ZLTE3ZivIRM4/view?usp=sharing"
+    },
+    {
+      "title": "Programming Logic: Functions and Lists",
+      "date": "July 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1eRdoaW--aZQ0U4V0w3jSYfIx5Q9GcaK8/view?usp=sharing"
+    },
+    {
+      "title": "Beginner in Programming G7 - ONE",
+      "date": "August 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1_gGgUc6ecURcXgx82cS9FPrDujOjj91P/view?usp=sharing"
+    },
+    {
+      "title": "Exploratory Data Analysis with Python",
+      "date": "June 2024",
+      "issuer": "SENA",
+      "url": "https://drive.google.com/file/d/1drcdCJXWSS5NRp5Aw96c7BkfrLqIIYGE/view?usp=sharing"
+    },
+    {
+      "title": "Java Object-Oriented Training",
+      "date": "January 2025",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/1ysKZ1ReKlUkAdPJ5Ux4DVpMlw7_6sFtu/view?usp=sharing"
+    },
+    {
+      "title": "App Development with In-Memory Data Management - Java",
+      "date": "November 2024",
+      "issuer": "SENA",
+      "url": "https://drive.google.com/file/d/1VBYHN77NgoOsAsyPlyHH4vLo5sUlNQdx/view?usp=drive_link"
+    },
+    {
+      "title": "ChatGPT: Optimizing Result Quality",
+      "date": "July 2024",
+      "issuer": "Oracle and Alura Latam",
+      "url": "https://drive.google.com/file/d/13AaAFRtDv6ocSg20ObcQU-fQ8cQpqFPy/view?usp=sharing"
+    }
+  ],
+  "projects.title": "My Projects",
+  "projects.description": "Welcome to my portfolio! Explore a collection of projects that showcase my experience in web development.",
+  "projects.button": "See more",
+  
+  "contact.title": "Contact Me",
+  "contact.description": "Whether it's a job opportunity, a creative proposal, or just a chat about technology, I'll be happy to receive your message.",
+  "contact.placeholder.name": "Enter your name",
+  "contact.placeholder.email": "Enter your email",
+  "contact.placeholder.message": "Enter your message",
+  "contact.button": "Send →",
+  "contact.success": "Email sent successfully!",
+  "contact.error": "Please complete all fields before sending.",
+
+  "footer.copyright": "© {{year}} Joen Anaya. All rights reserved."
+}

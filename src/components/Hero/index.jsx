@@ -4,6 +4,7 @@ import resumePdf from "../../assets/resume.pdf"; // Importa el PDF
 import styles from "./Hero.module.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
 
@@ -12,8 +13,12 @@ function Hero() {
   const [certifications, setCertifications] = useState(0);
   const [englishLevel, setEnglishLevel] = useState("B1");
   const [typedText, setTypedText] = useState("");
-  const texts = ["Software Developer", "Power Platform Developer"];
   const [step, setStep] = useState(0);
+  const { t} = useTranslation();
+  const texts = [
+    t("hero.subtitle1"),
+    t("hero.subtitle2")
+  ];
 
   useEffect(() => {
     let index = 0;
@@ -91,11 +96,11 @@ function Hero() {
       </h2>
 
       <h1 className={styles.title}>
-        Hello, I'm <br className={styles.brHiddenOnSmall} />
+        {t("hero.title")} <br className={styles.brHiddenOnSmall} />
         <span className={styles.highlight}>Joen Anaya.</span>
       </h1>
       <p className={styles.description}>
-        Desarrollador junior colombiano con formación en Ingeniería de Sistemas y experiencia creando aplicaciones web con React, Java y Power Platform, aplicando buenas prácticas, arquitecturas modernas y enfoque en la experiencia de usuario.
+        {t("hero.description")}
       </p>
 
       <div className={styles.buttonContainer}>
@@ -103,43 +108,42 @@ function Hero() {
           to="contact"
           spy={true}
           smooth={true}
-          offset={-90} // Ajusta según la altura de tu navbar
+          offset={-90}
           duration={500}
           className={styles.btnPrimary}
         >
-          contactame <ArrowRight size={16} />
+          {t("hero.contact")} <ArrowRight size={16} />
         </Link>
         <a
-          href={resumePdf} 
+          href={resumePdf}
           download
           className={styles.btnSecondary}
         >
-          currículum <Download size={16} />
+          {t("hero.cv")} <Download size={16} />
         </a>
       </div>
 
       <div className={styles.statsContainer}>
         <div className={styles.statsItem}>
           <p className={styles.firstStat}>{experience}</p>
-          <p className={styles.secondStat}>Años de experiencia</p>
+          <p className={styles.secondStat}>{t("hero.stats.experience")}</p>
         </div>
 
         <div className={styles.statsItem}>
           <p className={styles.firstStat}>+{skills}</p>
-          <p className={styles.secondStat}>Skills</p>
+          <p className={styles.secondStat}>{t("hero.stats.skills")}</p>
         </div>
 
         <div className={styles.statsItem}>
           <p className={styles.firstStat}>+{certifications}</p>
-          <p className={styles.secondStat}>Certificaciónes</p>
+          <p className={styles.secondStat}>{t("hero.stats.certifications")}</p>
         </div>
 
         <div className={styles.statsItem}>
           <p className={styles.firstStat}>{englishLevel}</p>
-          <p className={styles.secondStat}>Ingles</p>
+          <p className={styles.secondStat}>{t("hero.stats.english")}</p>
         </div>
       </div>
-
     </section>
   );
 }
