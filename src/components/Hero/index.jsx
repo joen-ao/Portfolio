@@ -71,7 +71,7 @@ function Hero() {
   }, []);
 
   useEffect(() => {
-  const levels = ["A0", "A1", "A2", "B0", "B1"];
+  const levels = ["A0", "A1", "A2", "B0", "B1", "B2"];
   let index = 0;
   const interval = setInterval(() => {
     setEnglishLevel(levels[index]);
