@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .contactSection {
+  background: linear-gradient(180deg, #0f172a, #1e293b);
 }
 
 .container {
@@ -20,10 +25,18 @@
   margin-bottom: 1rem;
 }
 
+[data-theme="dark"] .title {
+  color: #f1f5f9;
+}
+
 .description {
   font-size: 1rem;
   color: #6b7280;
   margin-bottom: 2rem;
+}
+
+[data-theme="dark"] .description {
+  color: #94a3b8;
 }
 
 .form {
@@ -55,9 +68,19 @@
   color: #000;
 }
 
+[data-theme="dark"] .input {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
 .input:focus {
   outline: none;
   border-color: #3b82f6;
+}
+
+[data-theme="dark"] .input:focus {
+  border-color: #60a5fa;
 }
 
 .textarea {
@@ -72,15 +95,30 @@
   color: #000;
 }
 
+[data-theme="dark"] .textarea {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
 .textarea:focus {
   outline: none;
   border-color: #3b82f6;
+}
+
+[data-theme="dark"] .textarea:focus {
+  border-color: #60a5fa;
 }
 .input::placeholder,
 .textarea::placeholder {
   color: #aaa;
   font-size: 1rem;
   opacity: 1;
+}
+
+[data-theme="dark"] .input::placeholder,
+[data-theme="dark"] .textarea::placeholder {
+  color: #94a3b8;
 }
 
 .button {
@@ -95,8 +133,18 @@
   transition: background-color 0.2s;
 }
 
+[data-theme="dark"] .button {
+  background-color: #60a5fa;
+  color: #0f172a;
+}
+
 .button:hover {
   background-color: #0953ca;
+}
+
+[data-theme="dark"] .button:hover {
+  background-color: #3b82f6;
+  color: white;
 }
 
 .footer {
@@ -109,10 +157,18 @@
   font-size: 1rem;
 }
 
+[data-theme="dark"] .icon {
+  color: #94a3b8;
+}
+
 .email {
   font-size: 0.9rem;
   color: #6b7280;
   margin-top: 0.25rem;
+}
+
+[data-theme="dark"] .email {
+  color: #94a3b8;
 }
 
 .signature {
@@ -122,6 +178,14 @@
   color: #111827;
 }
 
+[data-theme="dark"] .signature {
+  color: #f1f5f9;
+}
+
 .dot {
   color: #ef4444;
+}
+
+[data-theme="dark"] .dot {
+  color: #f87171;
 }

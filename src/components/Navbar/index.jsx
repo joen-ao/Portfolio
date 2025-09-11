@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { Moon, Sun } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const sections = [
@@ -13,7 +14,17 @@ const sections = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "light" ? "dark" : "light"));
+  };
 
   const handleLinkClick = () => setMenuOpen(false);
 
@@ -62,13 +73,28 @@ const Navbar = () => {
             
           </ul>
         </div>
-        <div className={styles.languageToggle}>
-          <button className={styles.languageSwitch} onClick={toggleLanguage} aria-label="Cambiar idioma">
-          <span className={i18n.language === "es" ? styles.activeLang : ""}>ES</span>
-          <span className={styles.separator}>|</span>
-          <span className={i18n.language === "en" ? styles.activeLang : ""}>EN</span>
-        </button>
+        <div className={styles.controls}>
+          <button 
+            className={styles.themeToggle} 
+            onClick={toggleTheme} 
+            aria-label="Cambiar tema"
+            title={theme === "light" ? "Activar modo oscuro" : "Activar modo claro"}
+          >
+            {theme === "light" ? (
+              <Moon size={18} strokeWidth={2} style={{ display: 'block' }} />
+            ) : (
+              <Sun size={18} strokeWidth={2} style={{ display: 'block' }} />
+            )}
+          </button>
+          <div className={styles.languageToggle}>
+            <button className={styles.languageSwitch} onClick={toggleLanguage} aria-label="Cambiar idioma">
+            <span className={i18n.language === "es" ? styles.activeLang : ""}>ES</span>
+            <span className={styles.separator}>|</span>
+            <span className={i18n.language === "en" ? styles.activeLang : ""}>EN</span>
+          </button>
+          </div>
         </div>
+        
       </nav>
     </header>
   );

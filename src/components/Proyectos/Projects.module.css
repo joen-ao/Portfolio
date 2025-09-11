@@ -12,6 +12,11 @@
   text-align: center;
   margin-right: auto;
   margin-bottom: 7.6rem;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .projectSection {
+  background-color: #0f172a;
 }
 
 .projectCard {
@@ -32,12 +37,20 @@
   margin-bottom: 1rem;
 }
 
+[data-theme="dark"] .sectionTitle {
+  color: #f1f5f9;
+}
+
 .sectionDescription {
   font-size: 1rem;
   color: #6b7280;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 3rem;
+}
+
+[data-theme="dark"] .sectionDescription {
+  color: #94a3b8;
 }
 
 .projectGrid {
@@ -58,9 +71,18 @@
   flex-direction: column;
 }
 
+[data-theme="dark"] .projectCard {
+  background: #1e293b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .projectCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .projectCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .imageContainer {
@@ -94,10 +116,18 @@
   margin-bottom: 0.5rem;
 }
 
+[data-theme="dark"] .projectTitle {
+  color: #f1f5f9;
+}
+
 .projectCategory {
   font-size: 0.9rem;
   color: #6b7280;
   margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .projectCategory {
+  color: #94a3b8;
 }
 
 .skillsBadges {
@@ -116,6 +146,11 @@
   font-weight: 500;
 }
 
+[data-theme="dark"] .badge {
+  background-color: #475569;
+  color: #cbd5e1;
+}
+
 .btnSecondary {
   align-items: center;
   border: 1px solid #3b82f6; /* border-gray-400 */
@@ -128,9 +163,19 @@
   transition: background-color 0.3s ease;
 }
 
+[data-theme="dark"] .btnSecondary {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
 .btnSecondary:hover {
   background-color: #3b82f6; /* hover:bg-gray-100 */
   color: #ffffff;
+}
+
+[data-theme="dark"] .btnSecondary:hover {
+  background-color: #60a5fa;
+  color: #0f172a;
 }
 
 @media (max-width: 640px) {

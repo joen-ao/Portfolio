@@ -7,12 +7,21 @@
   padding: 0.5rem 0;
   background-color: white;
   box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .header {
+  background-color: #0f172a;
 }
 
 .header.scrolled {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+[data-theme="dark"] .header.scrolled {
+  background-color: rgba(15, 23, 42, 0.85);
 }
 
 .header.scrolled .menuWrapper {
@@ -36,6 +45,18 @@
     rgba(255, 255, 255, 0) 100%
   );
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .menuWrapper {
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0) 0%,
+    #1e293b 20%,
+    #1e293b 80%,
+    rgba(15, 23, 42, 0) 100%
+  );
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -73,6 +94,10 @@
   align-items: center;
 }
 
+[data-theme="dark"] .menu {
+  color: #d1d5db;
+}
+
 .link {
   color: #374151;
   text-decoration: none;
@@ -80,11 +105,21 @@
   cursor: pointer;
 }
 
+[data-theme="dark"] .link {
+  color: #d1d5db;
+}
+
 .link:hover,
 .link.active {
   color: #2563eb; /* Azul */
   font-weight: 600;
   border-bottom: 2px solid #2563eb;
+}
+
+[data-theme="dark"] .link:hover,
+[data-theme="dark"] .link.active {
+  color: #60a5fa; /* Azul más claro para dark mode */
+  border-bottom-color: #60a5fa;
 }
 
 .hamburger {
@@ -111,20 +146,83 @@
   border: 1px solid #2563eb;
 }
 
-.languageToggle button {
-  background-color: transparent;
-  border: 2px solid #2563eb;
-  color: #2563eb;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+[data-theme="dark"] .hamburgerBar {
+  background: #60a5fa;
+  border-color: #60a5fa;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   position: absolute;
   right: 2rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 50%;
+  color: #2563eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+[data-theme="dark"] .themeToggle {
+  background-color: #1e293b;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.themeToggle svg {
+  width: 18px;
+  height: 18px;
+  color: #2563eb;
+}
+
+[data-theme="dark"] .themeToggle svg {
+  color: #60a5fa;
+}
+
+.themeToggle:hover {
+  background-color: #2563eb;
+  color: white;
+  transform: scale(1.05);
+}
+
+[data-theme="dark"] .themeToggle:hover {
+  background-color: #60a5fa;
+}
+
+.themeToggle:hover svg {
+  color: white;
+}
+
+.themeToggle:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+[data-theme="dark"] .themeToggle:focus {
+  border-color: #60a5fa;
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+  border-color: #2563eb;
+}
+
+[data-theme="dark"] .themeToggle:active {
+  border-color: #60a5fa;
 }
 
 .languageSwitch {
@@ -139,7 +237,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: border-color 0.2s;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .languageSwitch {
+  background: #1e293b;
+  border-color: #60a5fa;
+  color: #60a5fa;
 }
 
 .languageSwitch:active,
@@ -154,12 +258,21 @@
   font-weight: 700;
 }
 
+[data-theme="dark"] .separator {
+  color: #60a5fa;
+}
+
 .activeLang {
   color: #fff;
   background: #2563eb;
   border-radius: 9999px;
   padding: 0.15rem 0.7rem;
   transition: background 0.2s, color 0.2s;
+}
+
+[data-theme="dark"] .activeLang {
+  background: #60a5fa;
+  color: #0f172a;
 }
 
 /* Responsive styles */
@@ -205,12 +318,23 @@
     pointer-events: auto;
     transform: translateY(0);
   }
-  .languageToggle {
+  .controls {
     position: static;
     right: unset;
     top: unset;
     transform: none;
     margin-left: auto;
     z-index: 10;
+    gap: 0.5rem;
+  }
+  
+  .themeToggle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  [data-theme="dark"] .menu {
+    background: #1e293b;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   }
 }

@@ -5,6 +5,13 @@
   width: 100%;
   font-size: 0.875rem;
   color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .footer {
+  background-color: #111827;
+  border-top-color: #374151;
+  color: #9ca3af;
 }
 
 .content {
@@ -22,6 +29,10 @@
   font-weight: 500;
 }
 
+[data-theme="dark"] .footerText {
+  color: #d1d5db;
+}
+
 .socialLinks {
   display: flex;
   gap: 1.5rem;
@@ -37,8 +48,16 @@
   transition: color 0.3s ease;
 }
 
+[data-theme="dark"] .socialLink {
+  color: #d1d5db;
+}
+
 .socialLink:hover {
   color: #2563eb;
+}
+
+[data-theme="dark"] .socialLink:hover {
+  color: #60a5fa;
 }
 
 /* Responsive */

@@ -10,6 +10,11 @@
   padding-left: 1rem; /* px-4 */
   padding-right: 1rem;
   padding-top: 4rem;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .heroSection {
+  background-color: #0f172a;
 }
 
 .profileImg {
@@ -27,12 +32,34 @@
   margin-bottom: 0; /* mb-2 */
 }
 
+[data-theme="dark"] .subtitle {
+  color: #94a3b8;
+}
+
+.cursor {
+  color: #3b82f6;
+  animation: blink 1s infinite;
+}
+
+[data-theme="dark"] .cursor {
+  color: #60a5fa;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 .title {
   font-size: 3.25rem; /* text-4xl */
   font-weight: 700; /* font-bold */
   color: #111827; /* text-gray-900 */
   margin-bottom: 1rem;
   margin-top: 0; /* mb-4 */
+}
+
+[data-theme="dark"] .title {
+  color: #f1f5f9;
 }
 @media (min-width: 640px) {
   .title {
@@ -52,11 +79,19 @@
   color: #3b82f6;
 }
 
+[data-theme="dark"] .highlight {
+  color: #60a5fa;
+}
+
 .description {
   color: #6b7280; /* text-gray-500 */
   max-width: 36rem; /* max-w-xl */
   margin-bottom: 2rem; /* mb-8 */
   font-size: 1rem;
+}
+
+[data-theme="dark"] .description {
+  color: #94a3b8;
 }
 
 .buttonContainer {
@@ -80,9 +115,19 @@
   transition: background-color 0.3s ease;
 }
 
+[data-theme="dark"] .btnPrimary {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
 .btnPrimary:hover {
   background-color: #3b82f6; /* hover:bg-gray-900 */
   color: white;
+}
+
+[data-theme="dark"] .btnPrimary:hover {
+  background-color: #60a5fa;
+  color: #0f172a;
 }
 
 .btnSecondary {
@@ -99,9 +144,20 @@
   transition: background-color 0.3s ease;
 }
 
+[data-theme="dark"] .btnSecondary {
+  border-color: #475569;
+  color: #cbd5e1;
+  background-color: transparent;
+}
+
 .btnSecondary:hover {
   background-color: #f3f4f6; /* hover:bg-gray-100 */
   color: #3b82f6;
+}
+
+[data-theme="dark"] .btnSecondary:hover {
+  background-color: #334155;
+  color: #60a5fa;
 }
 
 .statsContainer {
@@ -131,10 +187,18 @@
   margin-right: 0.5rem;
 }
 
+[data-theme="dark"] .firstStat {
+  color: #f1f5f9;
+}
+
 .secondStat {
   color: #6b7280; /* text-gray-500 */
   text-align: left;
   width: 100%;
+}
+
+[data-theme="dark"] .secondStat {
+  color: #94a3b8;
 }
 
 @media (max-width: 640px) {
@@ -191,9 +255,19 @@
     color: white;
   }
 
+  [data-theme="dark"] .btnPrimary:active {
+    background-color: #60a5fa;
+    color: #0f172a;
+  }
+
   .btnSecondary:active {
     background-color: #f3f4f6; /* hover:bg-gray-100 */
     color: #3b82f6;
+  }
+
+  [data-theme="dark"] .btnSecondary:active {
+    background-color: #334155;
+    color: #60a5fa;
   }
 
   .profileImg {
