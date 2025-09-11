@@ -46,12 +46,18 @@ Este es el código fuente de mi portafolio personal, desarrollado en **React**. 
    cd portfolio
 
 2. Instala las dependencias:
-    npm install
+   ```bash
+   npm install
+   ```
 
 3. Configura tus variables de entorno para EmailJS en un archivo .env:
-    VITE_EMAILJS_SERVICE_ID=...
-    VITE_EMAILJS_TEMPLATE_ID=...
-    VITE_EMAILJS_PUBLIC_KEY=...
+   ```bash
+   VITE_EMAILJS_SERVICE_ID=...
+   VITE_EMAILJS_TEMPLATE_ID=...
+   VITE_EMAILJS_PUBLIC_KEY=...
+   ```
 
 4. Inicia el proyecto:
-    npm run dev
+   ```bash
+   npm run dev
+   ```
