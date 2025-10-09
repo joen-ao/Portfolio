@@ -1,10 +1,12 @@
 import { ArrowRight, Download } from "lucide-react";
 import profileImg from "../../assets/fb.jpg";
-import resumePdf from "../../assets/resume.pdf"; // Importa el PDF
+import resumeES from "../../assets/Joen Anaya - ES.pdf";
+import resumeEN from "../../assets/JoenAnaya - EN.pdf";
 import styles from "./Hero.module.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { calculateExperience } from "../../utils/experienceCalculator";
 
 function Hero() {
 
@@ -14,7 +16,7 @@ function Hero() {
   const [englishLevel, setEnglishLevel] = useState("B1");
   const [typedText, setTypedText] = useState("");
   const [step, setStep] = useState(0);
-  const { t} = useTranslation();
+  const { t, i18n } = useTranslation();
   const texts = [
     t("hero.subtitle1"),
     t("hero.subtitle2")
@@ -36,7 +38,7 @@ function Hero() {
 
   useEffect(() => {
     let current = 0;
-    const target = 1.3;
+    const target = calculateExperience();
     const step = 0.1;
     const interval = setInterval(() => {
       current = Math.min(current + step, target);
@@ -115,7 +117,7 @@ function Hero() {
           {t("hero.contact")} <ArrowRight size={16} />
         </Link>
         <a
-          href={resumePdf}
+          href={i18n.language === 'es' ? resumeES : resumeEN}
           download
           className={styles.btnSecondary}
         >

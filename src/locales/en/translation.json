@@ -2,12 +2,13 @@
   "Inicio": "Home",
   "Sobre mí": "About me",
   "Proyectos": "Projects",
+  "Magia": "Magic",
   "Contáctame": "Contact me",
 
   "hero.subtitle1": "Software Developer",
   "hero.subtitle2": "Power Platform Developer",
   "hero.title": "Hello, I'm",
-  "hero.description": "Junior Colombian developer with a background in Systems Engineering and experience building web applications with React, Java, and Power Platform, applying best practices, modern architectures, and a focus on user experience.",
+  "hero.description": "Colombian Fullstack Developer with a background in Systems Engineering and experience developing web and desktop applications using React, Node.js, Express, Supabase, Docker, and Power Platform. I apply development best practices, modern architectures, and a user-centered approach, delivering scalable, secure, and high-performance solutions.",
   "hero.contact": "contact me",
   "hero.cv": "resume",
   "hero.stats.experience": "Years of experience",
@@ -40,6 +41,12 @@
   "about.info.value.languages": "Spanish, English",
   "about.cert.button": "View certificate",
   "about.experiences": [
+    {
+      "title": "Fullstack Developer",
+      "company": "Upwork",
+      "period": "Aug 2025 - Present",
+      "description": "Developing complete applications as a freelancer on Upwork, including desktop apps with Electron and modern web apps with React, Node.js, Express, and TypeScript. I have created custom CRMs, web scrapers, and integrated external APIs like Twilio and Google Cloud."
+    },
     {
       "title": "Software Developer",
       "company": "Banco de la República - Colombia",
@@ -190,6 +197,12 @@
   "projects.title": "My Projects",
   "projects.description": "Welcome to my portfolio! Explore a collection of projects that showcase my experience in web development.",
   "projects.button": "See more",
+  
+  "magic.title": "Code Magic Show",
+  "magic.subtitle": "Where code comes alive and programming becomes art",
+  "magic.cta.title": "✨ Want this magic in your project?",
+  "magic.cta.description": "Let me bring the same creativity and technical excellence to your development needs",
+  "magic.cta.button": "Hire the Code Magician",
   
   "contact.title": "Contact Me",
   "contact.description": "Whether it's a job opportunity, a creative proposal, or just a chat about technology, I'll be happy to receive your message.",

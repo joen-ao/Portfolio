@@ -2,12 +2,13 @@
   "Inicio": "Inicio",
   "Sobre mí": "Sobre mí",
   "Proyectos": "Proyectos",
+  "Magia": "Magia",
   "Contáctame": "Contáctame",
 
   "hero.subtitle1": "Desarrollador de Software",
   "hero.subtitle2": "Desarrollador Power Platform",
   "hero.title": "Hola, soy",
-  "hero.description": "Desarrollador junior colombiano con formación en Ingeniería de Sistemas y experiencia creando aplicaciones web con React, Java y Power Platform, aplicando buenas prácticas, arquitecturas modernas y enfoque en la experiencia de usuario.",
+  "hero.description": "Fullstack Developer colombiano, con formación en Ingeniería de Sistemas y experiencia desarrollando aplicaciones web y de escritorio utilizando React, Node.js, Express, Supabase, Docker y Power Platform. Aplico buenas prácticas de desarrollo, arquitecturas modernas y un enfoque centrado en la experiencia del usuario, entregando soluciones escalables, seguras y de alto rendimiento.",
   "hero.contact": "contactame",
   "hero.cv": "currículum",
   "hero.stats.experience": "Años de experiencia",
@@ -40,6 +41,12 @@
   "about.info.value.languages": "Español, Inglés",
   "about.cert.button": "Ver certificado",
   "about.experiences": [
+    {
+        "title": "Fullstack Developer",
+        "company": "Upwork",
+        "period": "ago 2025 - actualidad",
+        "description": "Desarrollo aplicaciones completas como freelancer en Upwork, incluyendo apps de escritorio con Electron y web apps modernas con React, Node.js, Express y TypeScript. He creado CRMs personalizados, scrapers web, e integrado APIs externas como Twilio y Google Cloud."
+    },
     {
         "title": "Software Developer",
         "company": "Banco de la República - Colombia",
@@ -190,6 +197,12 @@
     "projects.title": "Mis Proyectos",
     "projects.description": "¡Bienvenidos a mi portafolio! Explore una colección de proyectos que muestran mi experiencia en el desarrollo web.",
     "projects.button": "Ver más",
+
+    "magic.title": "Show de Magia del Código",
+    "magic.subtitle": "Donde el código cobra vida y la programación se convierte en arte",
+    "magic.cta.title": "✨ ¿Quieres esta magia en tu proyecto?",
+    "magic.cta.description": "Permíteme llevar la misma creatividad y excelencia técnica a tus necesidades de desarrollo",
+    "magic.cta.button": "Contratar al Mago del Código",
 
     "contact.title": "Contactame",
     "contact.description": "Ya sea una oportunidad laboral, una propuesta creativa o una simple charla sobre tecnología, estaré encantado de recibir tu mensaje.",

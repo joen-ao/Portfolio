@@ -17,6 +17,10 @@ import htmlImg from "../../assets/html.png";
 import css3Img from "../../assets/css3.png";
 import javascriptImg from "../../assets/javascript.png";
 import reactImg from "../../assets/react.png";
+import nodejsImg from "../../assets/nodejs.png";
+import expressImg from "../../assets/express.png";
+import typescriptImg from "../../assets/typescript.svg";
+import supabaseImg from "../../assets/supabase.svg";
 import { useTranslation, Trans } from "react-i18next";
 
 function AboutMe() {
@@ -67,6 +71,7 @@ function AboutMe() {
                 { src: htmlImg, name: "HTML" },
                 { src: css3Img, name: "CSS3" },
                 { src: javascriptImg, name: "JavaScript" },
+                { src: typescriptImg, name: "TypeScript" },
                 { src: reactImg, name: "React" },
               ],
             },
@@ -74,8 +79,11 @@ function AboutMe() {
               title: "Backend",
               icons: [
                 { src: javaImg, name: "Java" },
+                { src: nodejsImg, name: "Node.js" },
+                { src: expressImg, name: "Express" },
                 { src: mysqlImg, name: "MySQL" },
                 { src: mongodbImg, name: "MongoDB" },
+                { src: supabaseImg, name: "Supabase" },
               ],
             },
             {
