@@ -22,7 +22,7 @@ import expressImg from "../../assets/express.png";
 import typescriptImg from "../../assets/typescript.svg";
 import supabaseImg from "../../assets/supabase.svg";
 import { useTranslation, Trans } from "react-i18next";
-import { useScrollTracking } from "../../hooks/useScrollTracking";
+import { useScrollTracking } from "../../Hooks/useScrollTracking";
 
 function AboutMe() {
   const sectionRef = useScrollTracking('about');

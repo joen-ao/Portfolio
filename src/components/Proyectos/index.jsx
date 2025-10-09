@@ -4,7 +4,7 @@ import forohubImage from '../../assets/forohub.jpg';
 import misTicketsImage from '../../assets/mistickets.png';
 import literaluraImage from '../../assets/library.jpg';
 import { useTranslation } from "react-i18next";
-import { useScrollTracking } from "../../hooks/useScrollTracking";
+import { useScrollTracking } from "../../Hooks/useScrollTracking";
 
 function Projects() {
   const sectionRef = useScrollTracking('projects');

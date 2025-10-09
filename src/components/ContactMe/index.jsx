@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from "react-i18next";
 import { trackContactSubmission } from "../../utils/analytics";
-import { useScrollTracking } from "../../hooks/useScrollTracking";
+import { useScrollTracking } from "../../Hooks/useScrollTracking";
 
 
 function ContactMe() {

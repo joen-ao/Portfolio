@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { calculateExperience } from "../../utils/experienceCalculator";
 import { trackDownload, trackButtonClick } from "../../utils/analytics";
-import { useScrollTracking } from "../../hooks/useScrollTracking";
+import { useScrollTracking } from "../../Hooks/useScrollTracking";
 
 function Hero() {
   const sectionRef = useScrollTracking('hero');
