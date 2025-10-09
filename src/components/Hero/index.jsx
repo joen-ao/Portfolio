@@ -7,8 +7,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { calculateExperience } from "../../utils/experienceCalculator";
+import { trackDownload, trackButtonClick } from "../../utils/analytics";
+import { useScrollTracking } from "../../hooks/useScrollTracking";
 
 function Hero() {
+  const sectionRef = useScrollTracking('hero');
 
   const [experience, setExperience] = useState(0);
   const [skills, setSkills] = useState(0);
@@ -85,7 +88,7 @@ function Hero() {
 
 
   return (
-    <section id="hero" className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection} ref={sectionRef}>
       <img
         src={profileImg}
         alt="Profile"
@@ -113,6 +116,7 @@ function Hero() {
           offset={-90}
           duration={500}
           className={styles.btnPrimary}
+          onClick={() => trackButtonClick('contact', 'hero')}
         >
           {t("hero.contact")} <ArrowRight size={16} />
         </Link>
@@ -120,6 +124,10 @@ function Hero() {
           href={i18n.language === 'es' ? resumeES : resumeEN}
           download
           className={styles.btnSecondary}
+          onClick={() => trackDownload(
+            i18n.language === 'es' ? 'Joen Anaya - ES.pdf' : 'JoenAnaya - EN.pdf',
+            i18n.language
+          )}
         >
           {t("hero.cv")} <Download size={16} />
         </a>

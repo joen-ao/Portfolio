@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
 import { Github, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { trackSocialClick } from "../../utils/analytics";
 
 function Footer() {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            onClick={() => trackSocialClick('github', 'https://github.com/joen-ao')}
           >
             <Github size={18} />
             <span>GitHub</span>
@@ -28,6 +30,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
+            onClick={() => trackSocialClick('linkedin', 'https://www.linkedin.com/in/joen-anaya/')}
           >
             <Linkedin size={18} />
             <span>LinkedIn</span>

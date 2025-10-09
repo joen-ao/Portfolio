@@ -22,8 +22,10 @@ import expressImg from "../../assets/express.png";
 import typescriptImg from "../../assets/typescript.svg";
 import supabaseImg from "../../assets/supabase.svg";
 import { useTranslation, Trans } from "react-i18next";
+import { useScrollTracking } from "../../hooks/useScrollTracking";
 
 function AboutMe() {
+  const sectionRef = useScrollTracking('about');
   const [activeTab, setActiveTab] = useState("experience");
   const { ref, inView } = useInView({ threshold: 0.4 });
   const { ref: skillsRef, inView: skillsInView } = useInView({ threshold: 0.4 });
@@ -191,7 +193,7 @@ function AboutMe() {
   };
 
   return (
-    <section className={styles.aboutSection} id="about" >
+    <section className={styles.aboutSection} id="about" ref={sectionRef}>
       <div className={styles.leftPanel}>
         <h2 className={styles.heading}>{t("about.heading")}</h2>
         <p className={styles.text}>{t("about.text")}</p>

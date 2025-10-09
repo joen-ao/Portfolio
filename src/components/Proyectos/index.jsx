@@ -4,9 +4,10 @@ import forohubImage from '../../assets/forohub.jpg';
 import misTicketsImage from '../../assets/mistickets.png';
 import literaluraImage from '../../assets/library.jpg';
 import { useTranslation } from "react-i18next";
+import { useScrollTracking } from "../../hooks/useScrollTracking";
 
 function Projects() {
-
+  const sectionRef = useScrollTracking('projects');
   const { ref, inView } = useInView({ threshold: 0.3 });
   const { t } = useTranslation();
 
@@ -38,7 +39,7 @@ function Projects() {
   ];
 
   return (
-    <section className={styles.projectSection} id="projects">
+    <section className={styles.projectSection} id="projects" ref={sectionRef}>
       <h2 className={styles.sectionTitle}>{t("projects.title")}</h2>
       <p className={styles.sectionDescription}>
         {t("projects.description")}

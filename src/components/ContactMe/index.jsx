@@ -4,10 +4,12 @@ import styles from "./ContactMe.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from "react-i18next";
+import { trackContactSubmission } from "../../utils/analytics";
+import { useScrollTracking } from "../../hooks/useScrollTracking";
 
 
 function ContactMe() {
-
+  const sectionRef = useScrollTracking('contact');
   const { t } = useTranslation();
   const form = useRef();
 
@@ -41,16 +43,18 @@ function ContactMe() {
         () => {
           toast.success(t("contact.success"))
           form.current.reset();
+          trackContactSubmission(true);
         },
         (error) => {
           console.log('FAILED...', error.text);
+          trackContactSubmission(false);
         },
       );
     };
 
 
   return (
-    <section className={styles.contactSection} >
+    <section className={styles.contactSection} ref={sectionRef}>
       <div className={styles.container} id="contact">
         <h2 className={styles.title}>{t("contact.title")}</h2>
         <p className={styles.description}>
