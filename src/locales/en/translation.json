@@ -34,7 +34,7 @@
   "about.info.email": "Email",
   "about.info.languages": "Languages",
   "about.info.value.name": "Joen Anaya",
-  "about.info.value.experience": "1.3 years",
+  "about.info.value.experienceUnit": "years",
   "about.info.value.phone": "+57 3014184466",
   "about.info.value.nationality": "Colombian",
   "about.info.value.email": "anayajoen@gmail.com",
@@ -197,6 +197,9 @@
   "projects.title": "My Projects",
   "projects.description": "Welcome to my portfolio! Explore a collection of projects that showcase my experience in web development.",
   "projects.button": "See more",
+  "projects.category.frontend": "Frontend",
+  "projects.category.backend": "Backend",
+  "projects.category.fullstack": "Fullstack",
   
   "magic.title": "Code Magic Show",
   "magic.subtitle": "Where code comes alive and programming becomes art",

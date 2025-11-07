@@ -23,6 +23,7 @@ import typescriptImg from "../../assets/typescript.svg";
 import supabaseImg from "../../assets/supabase.svg";
 import { useTranslation, Trans } from "react-i18next";
 import { useScrollTracking } from "../../Hooks/useScrollTracking";
+import { calculateExperience } from "../../utils/experienceCalculator";
 
 function AboutMe() {
   const sectionRef = useScrollTracking('about');
@@ -35,6 +36,7 @@ function AboutMe() {
   const experiences = t("about.experiences", { returnObjects: true });
   const degree = t("about.education.degree", { returnObjects: true });
   const certifications = t("about.certifications", { returnObjects: true });
+  const experience = calculateExperience();
 
 
   const renderContent = () => {
@@ -178,7 +180,7 @@ function AboutMe() {
               </p>
               <div className={styles.infoGrid}>
                 <p><span>{t("about.info.name")}:</span> <strong>{t("about.info.value.name")}</strong></p>
-                <p><span>{t("about.info.experience")}:</span> <strong>{t("about.info.value.experience")}</strong></p>
+                <p><span>{t("about.info.experience")}:</span> <strong>{experience} {t("about.info.value.experienceUnit")}</strong></p>
                 <p><span>{t("about.info.phone")}:</span> <strong>{t("about.info.value.phone")}</strong></p>
                 <p><span>{t("about.info.nationality")}:</span> <strong>{t("about.info.value.nationality")}</strong></p>
                 <p><span>{t("about.info.email")}:</span> <strong>{t("about.info.value.email")}</strong></p>

@@ -22,7 +22,7 @@
   height: 11rem; /* h-28 */
   border-radius: 9999px; /* rounded-full */
   object-fit: cover;
-  margin-bottom: 1.5rem; /* mb-6 */
+  margin: 1.5rem 0; /* mb-6 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
 }
 
