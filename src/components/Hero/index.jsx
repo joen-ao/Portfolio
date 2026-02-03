@@ -1,5 +1,6 @@
 import { ArrowRight, Download } from "lucide-react";
-import profileImg from "../../assets/fb.jpg";
+import profileImgBlack from "../../assets/picture-black.jpeg";
+import profileImgWhite from "../../assets/picture-white.png";
 import resumeES from "../../assets/Joen Anaya - ES.pdf";
 import resumeEN from "../../assets/JoenAnaya - EN.pdf";
 import styles from "./Hero.module.css";
@@ -12,6 +13,7 @@ import { useScrollTracking } from "../../Hooks/useScrollTracking";
 
 function Hero() {
   const sectionRef = useScrollTracking('hero');
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
 
   const [experience, setExperience] = useState(0);
   const [skills, setSkills] = useState(0);
@@ -24,6 +26,26 @@ function Hero() {
     t("hero.subtitle1"),
     t("hero.subtitle2")
   ];
+
+  // Detectar cambios en el tema
+  useEffect(() => {
+    const handleThemeChange = () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+      setTheme(currentTheme);
+    };
+
+    // Verificar el tema inicial
+    handleThemeChange();
+
+    // Observar cambios en el atributo data-theme
+    const observer = new MutationObserver(handleThemeChange);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"]
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let index = 0;
@@ -90,7 +112,7 @@ function Hero() {
   return (
     <section id="hero" className={styles.heroSection} ref={sectionRef}>
       <img
-        src={profileImg}
+        src={theme === "dark" ? profileImgWhite : profileImgBlack}
         alt="Profile"
         className={styles.profileImg}
       />
